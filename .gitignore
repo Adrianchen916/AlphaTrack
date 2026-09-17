@@ -1,0 +1,34 @@
+# Xcode 用户态与构建产物
+xcuserdata/
+*.xcuserstate
+*.xcuserdatad
+DerivedData/
+build/
+*.moved-aside
+
+# 编译中间产物 / 符号表
+*.o
+*.dSYM
+*.swiftmodule
+*.swiftmoduleinterface
+
+# 打包产物
+*.dmg
+*.ipa
+*.zip
+*.pkg
+*.xarchive
+
+# SwiftPM 本地依赖缓存
+.swiftpm/
+
+# macOS
+.DS_Store
+.AppleDouble
+._*
+.Spotlight-V100
+.Trashes
+
+# 本地临时脚本 / 私人笔记
+scratch/
+*.local.md

@@ -1,0 +1,83 @@
+name: 🐛 缺陷报告
+description: 提交一个复现得到的 Bug
+title: "[Bug] "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        感谢反馈！填写越具体，修得越快。请先确认：本仓库 Issues 里没有同类问题。
+
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: 问题描述
+      description: 期望发生什么，实际发生了什么？
+      placeholder: 在菜单栏微面板点「设置」无反应，期望弹出设置窗口
+    validations:
+      required: true
+
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: 复现步骤
+      description: 请给最小复现路径
+      placeholder: |
+        1. 启动 App
+        2. 点菜单栏图标
+        3. 点「设置」
+    validations:
+      required: true
+
+  - type: input
+    id: macos
+    attributes:
+      label: macOS 版本
+      placeholder: "例如 macOS 15.3 (24D60)"
+    validations:
+      required: true
+
+  - type: input
+    id: xcode
+    attributes:
+      label: Xcode 版本
+      description: 从源码运行时填写；下载 Release 包运行可写「N/A」
+      placeholder: "例如 Xcode 27.0"
+
+  - type: input
+    id: arch
+    attributes:
+      label: 芯片架构
+      placeholder: "Apple Silicon (M 系列) / Intel"
+
+  - type: dropdown
+    id: module
+    attributes:
+      label: 涉及模块
+      options:
+        - HUD 极速存证（⌥A 浮窗）
+        - 主面板 Dashboard
+        - 菜单栏微面板
+        - 复盘详情 / 存证流水
+        - 来源档案 / KOL 管理
+        - 设置
+        - 行情取价（MarketData）
+        - 自动对账 / 结算判定
+        - 通知 / 日历 / 提醒事项
+        - 存储与迁移
+        - 其他 / 不确定
+    validations:
+      required: true
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: 相关日志
+      description: 打开 Console.app，筛选 `[AlphaTrack]` 前缀，粘贴相关片段
+      render: text
+
+  - type: textarea
+    id: context
+    attributes:
+      label: 补充截图 / 录屏
+      description: UI 类问题强烈建议附截图或录屏
